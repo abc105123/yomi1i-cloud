@@ -13,7 +13,7 @@
     <artifactId>yomi1i-framework</artifactId>
 
     <modules>
-
+        <module>yomi1i-common</module>
     </modules>
 
     <dependencies>

@@ -19,6 +19,9 @@
         <spring.boot.version>3.2.3</spring.boot.version>
         <spring.cloud.version>2023.0.0</spring.cloud.version>
         <spring.cloud.alibaba.version>2022.0.0.0</spring.cloud.alibaba.version>
+        <!--   Web 相关   -->
+        <springdoc.version>2.3.0</springdoc.version>
+        <knife4j.version>4.5.0</knife4j.version>
         <!--     Database 相关      -->
         <druid.version>1.2.21</druid.version>
         <mybatis-plus.version>3.5.5</mybatis-plus.version>
@@ -29,6 +32,8 @@
         <xxl-job.version>2.4.0</xxl-job.version>
         <!--   MQ 消息队列    -->
         <rocketmq-client.version>5.2.0</rocketmq-client.version>
+        <!--   日志 相关    -->
+        <log4j.version>2.23.0</log4j.version>
         <!--   工具类相关     -->
         <lombok.version>1.18.30</lombok.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
@@ -83,6 +88,24 @@
                 <version>${spring.boot.version}</version>
             </dependency>
 
+            <!--   Web 相关   -->
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+
             <!--     Database 相关      -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -123,6 +146,23 @@
                 <artifactId>rocketmq-client</artifactId>
                 <version>${rocketmq-client.version}</version>
             </dependency>
+
+            <!--    日志 相关    -->
+            <dependency>
+                <!-- Implementation for Apache Log4J, a highly configurable logging tool that focuses on performance and low garbage generation.
+                It has a plugin architecture that makes it extensible and supports asynchronous logging based on LMAX Disruptor. -->
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <!-- The Apache Log4j SLF4J 2.0 API binding to Log4j 2 Core -->
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j2-impl</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+
+
             <!--   工具类相关     -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
